@@ -22,7 +22,7 @@
 ```
 > set request cpu 100 milicore max 200 milicore
 
-## Step 2: set autoscale
+## Step 2: Set Autoscaler
 ``` bash
 > oc autoscale dc/training-rest-notif-jms --min 2 --max 10 --cpu-percent=80
 ```
@@ -42,7 +42,6 @@ spec:
   scaleTargetRef:
     kind: DeploymentConfig
     name: training-rest-notif-jms
-    apiVersion: apps.openshift.io/v1
   minReplicas: 2
   maxReplicas: 10
   metrics:
@@ -51,4 +50,4 @@ spec:
         name: cpu
         targetAverageUtilization: 80
 ```
-> We will set minimum replica 2, max replica 10. autoscale when cpu reach 80% or 160 milicore
+> We will set minimum replica 2, max replica 10. autoscale when cpu reach 80% (targetAverageUtilization) or 160 milicore
