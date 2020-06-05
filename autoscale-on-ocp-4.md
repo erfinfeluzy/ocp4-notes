@@ -1,6 +1,7 @@
 # Autoscale in OCP 4.4
 
-## Step 1: Set resource limit on Deployment /Deployment Config
+## Step 1: Set resource limit on Deployment or Deployment Config
+Edit deployment config yaml or deployment yaml. set spec.containers[].resource.limits.cpu and request.cpu
 ```javascript
     spec:
       containers:
@@ -23,10 +24,16 @@
 > set request cpu 100 milicore max 200 milicore
 
 ## Step 2: Set Autoscaler
-``` bash
+
+Run below command if using dc (DeploymentConfig)
+```bash
 > oc autoscale dc/training-rest-notif-jms --min 2 --max 10 --cpu-percent=80
 ```
-this oc command will genereta HPA (Horizontal Pod Autoscaller)
+Or, run below command if using rc (ReplicationController) -> Deployment
+```bash
+> oc autoscale rc/training-rest-notif-jms --min 2 --max 10 --cpu-percent=80
+```
+this oc command will generate HPA (Horizontal Pod Autoscaller)
 ```javascript
 kind: HorizontalPodAutoscaler
 apiVersion: autoscaling/v2beta1
@@ -51,3 +58,6 @@ spec:
         targetAverageUtilization: 80
 ```
 > We will set minimum replica 2, max replica 10. autoscale when cpu reach 80% (targetAverageUtilization) or 160 milicore
+
+## Notes
+> beware of your application vcpu consumption during startup. if you set request cpu to small, hence it will scale out your pod during apps startup process.
