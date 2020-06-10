@@ -4,7 +4,7 @@
 This tutorial assumes the following requirements are met:
 
 - OpenShift 4+ cluster and oc binary tool
-- Tekton Pipelines 0.5.2 (different versions may need adjustments)
+- Openshift Pipeline Operator
 - Camel K Client Tools 1.0.0-M2 (kamel binary tool)
 - Optional: Tekton CLI 
 
@@ -19,20 +19,20 @@ $ oc new-project camel-pipelines
 ```
 
 ## Step 3: Create permission for serviceaccounts
-Use this file on assets/camel-k-pipeline-permissions.yaml
+Use this file on [assets/camel-k-pipeline-permissions.yaml](https://raw.githubusercontent.com/erfinfeluzy/ocp4-notes/master/assets/camel-k-pipeline-permissions.yaml)
 ```bash
 $ oc apply -f camel-k-pipeline-permissions.yaml
 ```
 
 ## Step 4: Create tekton pipeline
-Use this file on assets/camel-k-pipeline-task-definition.yaml
+Use this file on [assets/camel-k-pipeline-task-definition.yaml](https://raw.githubusercontent.com/erfinfeluzy/ocp4-notes/master/assets/pipeline-task-definition.yaml)
 ```bash
 $ oc apply -f camel-k-pipeline-task-definition.yaml
 ```
 ![https://camel.apache.org/camel-k/latest/_images/tekton/tekton-pipeline-definition.png](https://camel.apache.org/camel-k/latest/_images/tekton/tekton-pipeline-definition.png)
 
 ## Step 5: Trigerring a Pipeline execution
-Use this file on assets/pipeline-task-run.yaml 
+Use this file on [assets/pipeline-task-run.yaml](https://raw.githubusercontent.com/erfinfeluzy/ocp4-notes/master/assets/pipeline-task-run.yaml)
 ```bash
 oc apply -f camel-k-pipeline-task-run.yaml
 ```
