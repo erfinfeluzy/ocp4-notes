@@ -1,7 +1,8 @@
-# Autoscale in OCP 4.4
+# Autoscale in OCP 4.x
 
 ## Step 1: Set resource limit on Deployment or Deployment Config
-Edit deployment config yaml or deployment yaml. set this varialble
+This step is for existing service which not yet set resource limit.
+Edit deployment config yaml or deployment yaml. set this variable
 - spec.containers[].resource.limits.cpu -> max limit
 - spec.containers[].resource.request.cpu -> initial vcpu
 ```javascript
