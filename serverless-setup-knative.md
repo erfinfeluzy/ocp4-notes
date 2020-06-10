@@ -10,4 +10,4 @@ This section shows Knative setup on Ocp4 as part of 4K (K8s-Knative-Kafka-Kamel)
 ## Step 4: Setup knative CLI (kn) on your Desktop (optional)
 
 ## Step 5: Deploy knative application from quay.io
-use my sample repository: [quay.io/efeluzy/tutorial-kafka-quarkus:v2](quay.io/efeluzy/tutorial-kafka-quarkus)
+use my sample repository: [quay.io/efeluzy/tutorial-kafka-quarkus:v2](https://quay.io/efeluzy/tutorial-kafka-quarkus)
