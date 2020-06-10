@@ -16,7 +16,7 @@ installation docs here [https://docs.openshift.com/container-platform/4.4/server
 ## Step 5: Deploy knative application from quay.io
 use my sample Quarkus application repository for kafka client: [quay.io/efeluzy/tutorial-kafka-quarkus:v2](https://quay.io/efeluzy/tutorial-kafka-quarkus)
 1. Topology > add container image. image url : quay.io/efeluzy/tutorial-kafka-quarkus:v2
-2. Deploy as Serverless deployment (min pod 0 max pod 10)
+2. Deploy as knative (Serverless) deployment (min pod 0 max pod 10)
 3. new knative apps on topology
 4. Check serverless apps using **kn** CLI
 ```bash
