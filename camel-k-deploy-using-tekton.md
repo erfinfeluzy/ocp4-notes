@@ -3,10 +3,10 @@
 ## Prerequisite
 This tutorial assumes the following requirements are met:
 
-- OpenShift 4+ cluster and oc binary tool
-- Openshift Pipeline Operator
-- Camel K Client Tools 1.0.0-M2 (kamel binary tool)
-- Optional: Tekton CLI 
+- OpenShift 4+ cluster and oc binary tool. See docs [here](https://try.openshift.com).
+- Openshift Pipeline Operator. See docs [here](https://github.com/openshift/pipelines-tutorial).
+- Camel K Client Tools - Kamel. See docs [here](https://camel.apache.org/camel-k/latest/cli/cli.html).
+- Optional: Tekton CLI. See docs [here](https://github.com/tektoncd/cli).
 
 ## Step 1: Cluster setup
 This step will install camel operator on your ocp cluster
