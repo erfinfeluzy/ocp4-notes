@@ -1,4 +1,4 @@
-# Deploy Camel-K using Tekton on OCP
+# Deploy with Camel-K using Tekton on OCP
 
 ## Prerequisite
 This tutorial assumes the following requirements are met:
