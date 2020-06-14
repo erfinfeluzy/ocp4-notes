@@ -9,3 +9,4 @@ This repository contains collection of helpfull notes for Openshift 4:
 5. Deploy Fuse (Camel) Kafka client using s2i - in progress
 6. [Deploy Kamel using tekton pipeline](https://github.com/erfinfeluzy/ocp4-notes/blob/master/camel-k-deploy-using-tekton.md)
 7. 4KQ Demo preparation (k8s-knative-kafka-kamel-Quarkus) - in progress
+8. Openshift Pipeline demo using Tekton - in progress
