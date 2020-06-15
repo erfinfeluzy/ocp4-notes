@@ -23,10 +23,14 @@ choose revision
 $ kn service update quarkus-kafka-consumer --traffic quarkus-kafka-consumer-abcd=10 --traffic quarkus-kafka-consumer-vwxyz=90
 ```
 or using Openshift web console:
-
+![ocp web console](https://github.com/erfinfeluzy/ocp4-notes/blob/master/screenshot/serverless-ocp-traffic-distribution.png?raw=true)
 > Note: 
 > - **quarkus-kafka-consumer-vwxyz** is previous service revision tag name.
 > - new service will serve 10%, previous service will serve 90%
+
+## Result on Openshift Console
+![ocp web console](https://github.com/erfinfeluzy/ocp4-notes/blob/master/screenshot/serverless-canary-result.png?raw=true)
+
 ## Step 4: Check service status
 ```bash
 $ kn service describe quarkus-kafka-consumer
