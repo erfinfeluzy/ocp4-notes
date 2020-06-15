@@ -3,14 +3,24 @@
 This is step by step instruction for demonstrating Canary Deployment with knative. 
 Application in this demo is using my custom apps on Quay, consume Kafka Topik and stream to REST API.
 
+## Prerequisite
+- Install OpenShift Serveless or knative using operator
+- Install knative (kn) CLI
+
+## Step 0: Login to Openshift CLI and choose designated namespace
+```bash
+$ oc login
+
+$ oc project my-project
+```
 ## Step 1: Deploy knative apps
 ```bash
-kn service create quarkus-kafka-consumer-from-cli --image quay.io/efeluzy/quarkus-kafka-consumer:v3
+$ kn service create quarkus-kafka-consumer-from-cli --image quay.io/efeluzy/quarkus-kafka-consumer:v3
 ```
 
 ## Step 2: Revise knative apps
 ```bash
-kn service update quarkus-kafka-consumer --image quay.io/efeluzy/quarkus-kafka-consumer:latest
+$ kn service update quarkus-kafka-consumer --image quay.io/efeluzy/quarkus-kafka-consumer:latest
 ```
 
 ## Step 3: Distribute service traffic
