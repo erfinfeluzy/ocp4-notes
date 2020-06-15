@@ -13,11 +13,13 @@ kn service create quarkus-kafka-consumer-from-cli --image quay.io/efeluzy/quarku
 kn service update quarkus-kafka-consumer --image quay.io/efeluzy/quarkus-kafka-consumer:latest
 ```
 
-## Step 3: Distribute service
+## Step 3: Distribute service traffic
 Using knative CLI
 ```bash
 $ kn service update quarkus-kafka-consumer --traffic @latest=10 --traffic quarkus-kafka-consumer-vwxyz=90
 ```
+or using Openshift web console:
+
 > Note: 
 > - **quarkus-kafka-consumer-vwxyz** is previous service revision tag name.
 > - new service will serve 10%, previous service will serve 90%
