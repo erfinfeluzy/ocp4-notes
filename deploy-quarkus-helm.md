@@ -58,12 +58,21 @@ image:
 
 ### Modify Service to use Application port on 8080
 ``` bash
-$ vim template/service.yaml
-
+$ vim template/deployment.yaml
+...
           ports:
             - name: http
               containerPort: 8080
               protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /health/live
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /health/ready
+              port: http
+...
 ```
 
 ## Step 3: Add Openshift Secure Routes to Helm Chart
