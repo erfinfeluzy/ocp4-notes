@@ -10,4 +10,5 @@ This repository contains collection of helpfull notes for Openshift 4:
 6. [Deploy Kamel using tekton pipeline](https://github.com/erfinfeluzy/ocp4-notes/blob/master/camel-k-deploy-using-tekton.md)
 7. 4KQ Demo preparation (k8s-knative-kafka-kamel-Quarkus) - in progress
 8. Openshift Pipeline demo using Tekton - in progress
-9. Deploy Quarkus with Helm Chart (https://github.com/erfinfeluzy/ocp4-notes/blob/master/camel-k-deploy-using-tekton.md)
+9. [Deploy Quarkus with Helm Chart](https://github.com/erfinfeluzy/ocp4-notes/blob/master/deploy-quarkus-helm.md)
+10. [Debezium on Openshift Demo](https://github.com/erfinfeluzy/ocp4-notes/blob/master/debezium-on-ocp4.md)
