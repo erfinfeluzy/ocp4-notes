@@ -20,7 +20,7 @@ $ oc apply -f https://raw.githubusercontent.com/erfinfeluzy/ocp4-notes/master/as
 $ oc apply -f https://raw.githubusercontent.com/erfinfeluzy/ocp4-notes/master/assets/mssql-deployment.yaml
 ```
 > note: 
-- deployment uses image from microsoft * mcr.microsoft.com/mssql/server:2017-CU8-ubuntu *
+- deployment uses image from microsoft **mcr.microsoft.com/mssql/server:2017-CU8-ubuntu**
 - expose service as loadbalancer
 
 ### Step 6: Query on Pods
