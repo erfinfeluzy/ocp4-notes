@@ -1,4 +1,4 @@
-# Deploy Microsoft SQL Server (mssql) on Openshift 4
+# Deploy Microsoft SQL Server 2017 (mssql) on Openshift 4
 
 ### Step 1: Create new project
 ```bash
