@@ -64,3 +64,11 @@ id          name
 (1 rows affected)
 1> quit
 ```
+
+### Additional: Deploy .NetCore Sample Application
+```bash
+$ oc apply -f https://raw.githubusercontent.com/erfinfeluzy/ocp4-notes/master/assets/dotnet-template-erfin.json
+```
+
+
+
