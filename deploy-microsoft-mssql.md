@@ -69,8 +69,32 @@ id          name
 ```bash
 $ oc apply -f https://raw.githubusercontent.com/erfinfeluzy/ocp4-notes/master/assets/dotnet-template-erfin.json
 ```
-select template
+#### select template
+![Select Template](https://github.com/erfinfeluzy/ocp4-notes/blob/master/screenshot/dotnet-select-template.png?raw=true)
 
+#### instantiate template
+![Instantiate](https://github.com/erfinfeluzy/ocp4-notes/blob/master/screenshot/dotnet-instantiate-template.png)
 
-instantiate template
+#### Check database
 
+```bash
+$ oc get pods
+
+$ oc rsh mssql-deployment-XXXXXXX
+```
+Query inside mssql pods
+```bash
+$ cd /opt/mssql-tools/bin
+$ ./sqlcmd -S localhost -U sa -P Sql2019isfast
+1> use myContacts
+2> go
+Changed database context to 'myContacts'.
+1> select * from Customers
+2> go
+Id          Name
+----------- ----------------------------------------------------------------------------------------------------
+          1 erfin2
+          2 aryo
+
+(2 rows affected)
+```
