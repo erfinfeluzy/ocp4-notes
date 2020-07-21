@@ -69,6 +69,8 @@ id          name
 ```bash
 $ oc apply -f https://raw.githubusercontent.com/erfinfeluzy/ocp4-notes/master/assets/dotnet-template-erfin.json
 ```
+select template
 
 
+instantiate template
 
