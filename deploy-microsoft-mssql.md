@@ -98,3 +98,12 @@ Id          Name
 
 (2 rows affected)
 ```
+#### Additional: Change icon dotnet and mssql
+Add label to mssql deployment
+```bash
+app.kubernetes.io/name=mssql
+```
+Add label to dotnet deployment
+```bash
+app.kubernetes.io/name=dotnet
+```
