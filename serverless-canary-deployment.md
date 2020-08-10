@@ -15,7 +15,7 @@ $ oc project my-project
 ```
 ## Step 1: Deploy knative apps
 ```bash
-$ kn service create quarkus-kafka-consumer-from-cli --image quay.io/efeluzy/quarkus-kafka-consumer:v3
+$ kn service create quarkus-kafka-consumer --image quay.io/efeluzy/quarkus-kafka-consumer:v3
 ```
 
 ## Step 2: Revise knative apps
