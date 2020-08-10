@@ -15,12 +15,18 @@ $ oc project my-project
 ```
 ## Step 1: Deploy knative apps
 ```bash
-$ kn service create quarkus-kafka-consumer --image quay.io/efeluzy/quarkus-kafka-consumer:v3
+$ kn service create quarkus-kafka-consumer \
+--image quay.io/efeluzy/quarkus-kafka-consumer:v3 \
+--revision-name quarkus-kafka-consumer-v3 \
 ```
 
-## Step 2: Revise knative apps
+## Step 2: Revise knative apps v4 and distribute 50% traffic
 ```bash
-$ kn service update quarkus-kafka-consumer --image quay.io/efeluzy/quarkus-kafka-consumer:latest
+kn service update quarkus-kafka-consumer \
+--image quay.io/efeluzy/quarkus-kafka-consumer:latest \
+--revision-name quarkus-kafka-consumer-v4
+--traffic quarkus-kafka-consumer-v4=50 \
+--traffic quarkus-kafka-consumer-v3=50 \
 ```
 
 ## Step 3: Distribute service traffic
