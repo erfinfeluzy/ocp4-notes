@@ -32,9 +32,9 @@ Run below command if using dc (DeploymentConfig)
 ```bash
 > oc autoscale dc/training-rest-notif-jms --min 2 --max 10 --cpu-percent=80
 ```
-Or, run below command if using rc (ReplicationController) -> Deployment
+Or, run below command if using deployment -> Deployment
 ```bash
-> oc autoscale rc/training-rest-notif-jms --min 2 --max 10 --cpu-percent=80
+> oc autoscale deployment/training-rest-notif-jms --min 2 --max 10 --cpu-percent=80
 ```
 this oc command will generate HPA (Horizontal Pod Autoscaller)
 ```javascript
